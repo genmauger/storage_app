@@ -1,0 +1,14 @@
+<h4>Store Next Door</h4>
+
+<!--User login/logout/signup commands-->
+<div class="hmenu">
+  <% if user_signed_in? %>
+    <li>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to 'Login', new_user_session_path %>
+    </li>
+  <% end %>
+</div>
